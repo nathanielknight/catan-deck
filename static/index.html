@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Catan Deck</title>
+    <link href="style.css" />
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <p id="signature">A board game hack by <a href="https://nathanielknight.ca">Nathaniel Knight</a>.</p>
+    <div id="target">
+        <p>Catan Cards needs JavaScript enabled.</p>
+    </div>
+
+    <script src="app.js"></script>
+    <script>
+        let e = document.getElementById("target");
+        Elm.Main.init({ node: e });
+    </script>
+</body>
+
+</html>
