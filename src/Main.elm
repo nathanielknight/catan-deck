@@ -91,16 +91,8 @@ cardframe m =
     let
         c =
             topcard m
-
-        classes =
-            case c of
-                Nothing ->
-                    "card empty"
-
-                Just _ ->
-                    "card"
     in
-    Html.div [ id classes ] <| rendercard c
+    Html.div [ id "card" ] <| rendercard c
 
 
 rendercard : Maybe Card -> List (Html.Html Msg)

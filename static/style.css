@@ -1,0 +1,58 @@
+body {
+    max-width: 22em;
+    margin: auto;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 12pt;
+    background-color: #002b36;
+    color: #93a1a1;
+    padding: 0.5em;
+}
+
+a,
+a:visited {
+    color: #268bd2;
+}
+
+button {
+    font-size: 12pt;
+    background-color: #859900;
+    border: none;
+    border-radius: 5px;
+    color: #073642;
+}
+
+#signature {
+    font-size: 8pt;
+    margin-bottom: 2em;
+}
+
+#card {
+    border: 1px solid #eee8d5;
+    border-radius: 5px;
+    background-color: #073642;
+    margin: 1em auto;
+    width: 14em;
+    height: 20em;
+}
+
+#card h1 {
+    font-size: 60%;
+    margin: 0.5em;
+}
+
+#card h2 {
+    font-size: 650%;
+    margin: 0;
+    color: #859900;
+}
+
+#card p {
+    text-align: left;
+    padding: 0.2em 1em;
+}
+
+#card button {
+    font-size: 200%;
+    margin: 1em;
+}
