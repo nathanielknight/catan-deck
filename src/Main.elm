@@ -77,7 +77,7 @@ topcard m =
 
 drawctrl m =
     let
-        dec x = x - 1
+        dec x = clamp 0 100 <| x - 1
         n =
             m.deck
             |> List.length
@@ -118,10 +118,10 @@ rendercard mc =
 
 init : () -> ( Model, Cmd Msg )
 init () =
-    ( { deck = rawCards
-      , discard = []
+    ( { deck = []
+      , discard = rawCards
       }
-    , shuffleDeck
+    , Cmd.none
     )
 
 
