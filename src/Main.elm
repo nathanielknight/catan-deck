@@ -77,8 +77,12 @@ topcard m =
 
 drawctrl m =
     let
+        dec x = x - 1
         n =
-            String.fromInt <| List.length m.deck
+            m.deck
+            |> List.length
+            |> dec
+            |> String.fromInt
     in
     div []
         [ p [] [ text <| "(" ++ n ++ " left)" ]
