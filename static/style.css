@@ -1,15 +1,16 @@
+@import url('https://rsms.me/inter/inter.css');
 body {
-    max-width: 22em;
+    max-width: 18em;
     margin: auto;
     text-align: center;
-    font-family: sans-serif;
+    font-family: Inter, sans-serif;
     font-size: 12pt;
-    background-color: #002b36;
-    color: #93a1a1;
     padding: 0.5em;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background-color: rgb(26, 26, 26);
+    color: rgb(224,224,224);
 }
 
 a,
@@ -19,11 +20,13 @@ a:visited {
 
 button {
     font-size: 16pt;
-    background-color: #859900;
     border: none;
     border-radius: 5px;
-    color: #073642;
-    padding: 1em;
+    border: 1px solid green;
+    padding: 0.5em 2em;
+    width: 100%;
+    color: rgb(224,224,224);
+    background-color: rgb(32,32,32);
 }
 
 #target, .app {
@@ -36,31 +39,25 @@ button {
 }
 
 #card {
-    border: 1px solid #eee8d5;
+    border: 1px solid black;
     border-radius: 5px;
-    background-color: #073642;
     margin: 1em auto;
-    width: 14em;
-    height: 20em;
+    width: 100%;
+    height: 24em;
+    background-color: rgb(32,32,32);
 }
 
 #card h1 {
-    font-size: 60%;
+    font-size: 75%;
     margin: 0.5em;
 }
 
 #card h2 {
     font-size: 650%;
     margin: 0;
-    color: #859900;
 }
 
 #card p {
     text-align: left;
     padding: 0.2em 1em;
-}
-
-#card button {
-    font-size: 200%;
-    margin: 1em;
 }
