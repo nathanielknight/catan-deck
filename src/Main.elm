@@ -60,9 +60,9 @@ drawCard model =
 view : Model -> Html.Html Msg
 view m =
     Html.div [ class "app" ]
-        [ cardsLeft m
-        , controlButton m
+        [ controlButton m
         , cardframe m
+        , cardsLeft m
         ]
 
 
@@ -100,9 +100,7 @@ cardsLeft m =
                 |> dec
                 |> String.fromInt
     in
-    div []
-        [ p [] [ text <| "(" ++ n ++ " left)" ]
-        ]
+    p [] [ text <| n ++ " cards left in deck" ]
 
 
 cardframe : Model -> Html.Html Msg

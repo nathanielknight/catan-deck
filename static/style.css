@@ -7,6 +7,9 @@ body {
     background-color: #002b36;
     color: #93a1a1;
     padding: 0.5em;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 a,
@@ -15,15 +18,20 @@ a:visited {
 }
 
 button {
-    font-size: 12pt;
+    font-size: 16pt;
     background-color: #859900;
     border: none;
     border-radius: 5px;
     color: #073642;
+    padding: 1em;
+}
+
+#target, .app {
+    flex: 1;
 }
 
 #signature {
-    font-size: 8pt;
+    font-size: 10pt;
     margin-bottom: 2em;
 }
 
