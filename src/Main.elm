@@ -60,7 +60,8 @@ drawCard model =
 view : Model -> Html.Html Msg
 view m =
     Html.div [ class "app" ]
-        [ drawctrl m
+        [ cardsLeft m
+        , controlButton m
         , cardframe m
         ]
 
@@ -75,18 +76,32 @@ topcard m =
             Just c
 
 
-drawctrl m =
+controlButton m =
     let
-        dec x = clamp 0 100 <| x - 1
+        btn =
+            case m.deck of
+                [] ->
+                    button [ onClick Shuffle ] [ text "Shuffle" ]
+
+                _ ->
+                    button [ onClick Draw ] [ text "Draw" ]
+    in
+    div [] [ btn ]
+
+
+cardsLeft m =
+    let
+        dec x =
+            clamp 0 100 <| x - 1
+
         n =
             m.deck
-            |> List.length
-            |> dec
-            |> String.fromInt
+                |> List.length
+                |> dec
+                |> String.fromInt
     in
     div []
         [ p [] [ text <| "(" ++ n ++ " left)" ]
-        , button [ onClick Draw ] [ text "Draw" ]
         ]
 
 
@@ -103,7 +118,7 @@ rendercard : Maybe Card -> List (Html.Html Msg)
 rendercard mc =
     case mc of
         Nothing ->
-            [ Html.button [ onClick Shuffle ] [ text "Shuffle" ] ]
+            []
 
         Just c ->
             [ Html.h1 [] [ text c.title ]
